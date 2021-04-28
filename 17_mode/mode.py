@@ -11,3 +11,10 @@ def mode(nums):
         >>> mode([2, 2, 3, 3, 2])
         2
     """
+    count_dict = {}
+    for num in nums:
+        count_dict[num] = count_dict.get(num, 0) + 1
+    max_count = max(count_dict.values())
+    mode = count_dict[max_count]    
+    return mode
+        
