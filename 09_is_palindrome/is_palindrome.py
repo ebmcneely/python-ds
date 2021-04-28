@@ -21,3 +21,13 @@ def is_palindrome(phrase):
         >>> is_palindrome('Noon')
         True
     """
+    upper_phrase = phrase.upper()
+    no_space_upper_phrase = upper_phrase.replace(' ', '')
+    if no_space_upper_phrase[::-1] == no_space_upper_phrase:
+        return True
+    else:
+        return False
+
+
+
+
