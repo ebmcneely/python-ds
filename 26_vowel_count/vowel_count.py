@@ -7,3 +7,9 @@ def vowel_count(phrase):
         >>> vowel_count('HOW ARE YOU? i am great!') 
         {'o': 2, 'a': 3, 'e': 2, 'u': 1, 'i': 1}
     """
+    low_phrase = phrase.lower()
+    vowel_count_dict = {}
+    only_vowels = [char for char in low_phrase if char in ['a','e','i','o','u']]
+    for char in only_vowels:
+        vowel_count_dict[char] = only_vowels.count(char)
+    return vowel_count_dict
